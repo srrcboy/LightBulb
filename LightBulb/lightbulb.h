@@ -29,6 +29,7 @@ private slots:
 	void on_openButton_clicked();
 	//void displayMat(const cv::Mat &image);
     void displayMat(Mat image);
+	//double CalcMean(Mat image);
 
 private:
 	Ui::LightBulbClass ui;

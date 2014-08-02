@@ -1,5 +1,6 @@
 #include "lightbulb.h"
 #include <qdebug.h>
+#include <QMessageBox>
 LightBulb::LightBulb(QWidget *parent)
 	: QWidget(parent)
 {
@@ -43,7 +44,8 @@ void LightBulb::displayMat(Mat image)
                     image.cols*image.channels(),
                     QImage::Format_RGB888);
     }
-
+	
     ui.imagelabel->setPixmap(QPixmap::fromImage(img));
     ui.imagelabel->resize(ui.imagelabel->pixmap()->size());
+	QMessageBox::information(NULL,QObject::tr("test"),QObject::tr("test"));
 }
